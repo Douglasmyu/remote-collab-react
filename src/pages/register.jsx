@@ -3,7 +3,7 @@ import collabImage from "../assets/react.svg"; // 🖼️ Replace with your imag
 
 export default function Register() {
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex w-full">
       {/* green Left Side yo */}
       <div className="w-1/2 bg-green-500 text-white flex flex-col items-center justify-center p-8">
         <img
@@ -17,7 +17,9 @@ export default function Register() {
       {/* 🔙 Back Button */}
         <div className="absolute top-6 left-6">
           <Link to="/">
-            <button className="bg-white text-black px-4 py-2 rounded-lg font-semibold">
+            <button className="bg-blue-600 hover:bg-blue-700 
+                    text-white font-semibold px-6 py-3 rounded-lg 
+                    transition">
               Back
             </button>
           </Link>
