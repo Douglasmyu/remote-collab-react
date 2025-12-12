@@ -4,20 +4,17 @@ import collabImage from "../assets/react.svg"; // 🖼️ Replace with your imag
 export default function Register() {
   return (
     <div className="min-h-screen flex">
-      {/* 🟦 Left Side */}
-      <div className="w-1/2 bg-blue-700 text-white flex flex-col items-center justify-center p-8">
+      {/* green Left Side yo */}
+      <div className="w-1/2 bg-green-500 text-white flex flex-col items-center justify-center p-8">
         <img
           src={collabImage}
           alt="Collaboration"
-          className="w-2/3 max-w-sm mb-6"
+          className="w-20 h-20 spin-once"
         />
         <h2 className="text-3xl font-bold mb-2">Join Us</h2>
         <p className="text-lg text-blue-100">Create your account to get started</p>
       </div>
-
-      {/* ⚫ Right Side */}
-      <div className="w-1/2 bg-gray-900 text-white flex items-center justify-center p-10 relative">
-        {/* 🔙 Back Button */}
+      {/* 🔙 Back Button */}
         <div className="absolute top-6 left-6">
           <Link to="/">
             <button className="bg-white text-black px-4 py-2 rounded-lg font-semibold">
@@ -25,6 +22,10 @@ export default function Register() {
             </button>
           </Link>
         </div>
+
+      {/* white Right Side */}
+      <div className="w-1/2 bg-gray-900 text-white flex items-center justify-center p-10 relative">
+        
 
         {/* 📄 Form Card */}
         <div className="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-md">
