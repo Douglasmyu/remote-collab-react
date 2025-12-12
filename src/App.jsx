@@ -20,7 +20,7 @@ return (
 
 function AppContent(){
   const location = useLocation();
-  const noRoute = ["/Login","/Register"];
+  const noRoute = ["/Login","/Register", "/About"];
   const shouldShowNav = !noRoute.includes(location.pathname);
   
   return(

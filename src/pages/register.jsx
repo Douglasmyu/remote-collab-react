@@ -57,13 +57,9 @@ export default function Register() {
             <span>🔵</span> Sign in with Google
           </button>
 
-          <button className="w-full bg-white text-black py-2 rounded font-semibold flex items-center justify-center gap-2">
-            <span>⚫</span> Sign in with GitHub
-          </button>
-
           <p className="text-sm text-gray-400 mt-4 text-center">
             Already have an account?{" "}
-            <Link to="/login" className="text-blue-400 hover:underline">
+            <Link to="/Login" className="text-blue-400 hover:underline">
               Log In
             </Link>
           </p>
