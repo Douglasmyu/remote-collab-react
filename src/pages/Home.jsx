@@ -12,7 +12,7 @@ export default function Home(){
         <button className="bg-blue-600 hover:bg-blue-700 
           text-white font-semibold px-6 py-3 rounded-md 
           transition">
-            <Link to="/Login">
+            <Link to="/Register">
             Get Started
             </Link>
           </button>
