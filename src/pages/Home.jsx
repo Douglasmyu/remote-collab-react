@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Home(){
     return(
     <div id = "main" className='min-h-screen flex flex-col items-center justify-center text-center px-4'>
@@ -9,8 +10,12 @@ export default function Home(){
         Plan, chat, and track tasks in one place — from anywhere.</p>
       <div id ="start-button">
         <button className="bg-blue-600 hover:bg-blue-700 
-          text-white font-semibold px-6 py-3 rounded-md transition">
-          Get started</button>
+          text-white font-semibold px-6 py-3 rounded-md 
+          transition">
+            <Link to="/Login">
+            Get Started
+            </Link>
+          </button>
       </div>
     </div>
     );
