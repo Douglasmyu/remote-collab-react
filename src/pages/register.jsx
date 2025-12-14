@@ -1,7 +1,24 @@
 import { Link } from "react-router-dom";
 import collabImage from "../assets/react.svg"; // 🖼️ Replace with your image
+import React from "react";
+import { signInWithPopup } from "firebase/auth";
+import { googleProvider } from "../firebaseConfig";
+import { FcGoogle } from "react-icons/fc";
+
+
 
 export default function Register() {
+
+  const loginWithGoogle = async () => {
+    try{
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      alert(`Welcome ${user.displayName}`);
+    } catch (error) {
+      alert(error.message)
+    }
+  };
+
   return (
     <div className="min-h-screen flex w-full">
       {/* green Left Side yo */}
@@ -54,7 +71,7 @@ export default function Register() {
           </div>
 
           <button className="w-full bg-white text-black py-2 rounded font-semibold mb-2 flex items-center justify-center gap-2">
-            <span>🔵</span> Sign in with Google
+            <span><FcGoogle></FcGoogle></span> Sign in with Google
           </button>
 
           <p className="text-sm text-gray-400 mt-4 text-center">

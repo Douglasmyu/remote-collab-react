@@ -1,8 +1,24 @@
 import React from "react"
 import collabImage from "../assets/react.svg"; // 🖼️ Replace with your image
 import { Link } from "react-router-dom";
+import { signInWithPopup } from "firebase/auth";
+import { googleProvider } from "../firebaseConfig";
+import { FcGoogle } from "react-icons/fc";
+
+
+
 
 function login() {
+
+    const loginWithGoogle = async () => {
+        try{
+          const result = await signInWithPopup(auth, googleProvider);
+          const user = result.user;
+          alert(`Welcome ${user.displayName}`);
+        } catch (error) {
+          alert(error.message)
+        }
+      };
     return(
         <div id="whole" className="min-h-screen flex w-full">
             {/* right side white */}
@@ -40,8 +56,8 @@ function login() {
                         <span className="mx-2 text-sm text-gray-500">Or</span>
                         <hr className="flex-grow border-gray-600" />
                     </div>
-                    <button className="w-full bg-white text-black py-2 rounded font-semibold mb-2 flex items-center justify-center gap-2">
-                        sign in with google
+                    <button onClick={loginWithGoogle} className="w-full bg-white text-black py-2 rounded font-semibold mb-2 flex items-center justify-center gap-2">
+                        <span><FcGoogle></FcGoogle></span>sign in with google
                     </button>
                     <p className="text-sm text-gray-400 mt-4 text-center">Don't have an account?{" "}
                         <Link to ="/Register" className="text-blue-400 hover:underline">Sign Up</Link>
